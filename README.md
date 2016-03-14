@@ -21,5 +21,5 @@ Reference voltage vs. load current.
 
 ## Contributors
 
-Main Developer :HSO 
+Main Developer :HSO  
 Email: hugo(dot)soares(at)fe(dot)up(dot)pt
