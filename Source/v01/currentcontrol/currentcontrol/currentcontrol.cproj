@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>{1c08435d-92f2-407f-bd9a-c1e2583f5f55}</ProjectGuid>
+    <avrdevice>ATmega128</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>currentcontrol</AssemblyName>
+    <Name>currentcontrol</Name>
+    <RootNamespace>currentcontrol</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.21.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
+    <com_atmel_avrdbg_tool_simulator>
+      <ToolOptions xmlns="">
+        <InterfaceProperties>
+        </InterfaceProperties>
+      </ToolOptions>
+      <ToolType xmlns="">com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolNumber xmlns="">
+      </ToolNumber>
+      <ToolName xmlns="">Simulator</ToolName>
+    </com_atmel_avrdbg_tool_simulator>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="src\currentcontrol.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\adc\adc_analog.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\adc\adc_analog.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\ade775x\ade77xx.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\ade775x\ade77xx.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\ds182x\ds1820.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\ds182x\ds1820.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\ds182x\ds18b20.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\ds182x\ds18b20.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\eeprom\eeprom.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\eeprom\eeprom.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\i2c\twi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\i2c\twi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\interrupts\interruptvectors.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\interrupts\interruptvectors.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\lcds\hd774x.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\lcds\hd774x.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\lcds\hdpcf774x.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\lcds\hdpcf774x.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\lcds\ili932x.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\lcds\ili932x.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\lcds\ks010x.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\lcds\ks010x.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\motors\a498x.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\motors\a498x.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\motors\drv881x.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\motors\drv881x.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\motors\stepper.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\motors\stepper.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\ntc\ntc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\ntc\ntc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\pcf857x\pcf857x.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\pcf857x\pcf857x.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\pid\pid.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\pid\pid.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\sht1x\sht1x.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\sht1x\sht1x.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\sht2x\sht2x.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\sht2x\sht2x.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\spi\my_spi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\spi\my_spi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\timer\timer_utils.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\tsl256x\tsl2561.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\tsl256x\tsl2561.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\usart\usart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\usart\usart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\utils\bit_tools.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\utils\my_utils.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libs\utils\my_utils.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src" />
+    <Folder Include="src\libs\" />
+    <Folder Include="src\libs\adc\" />
+    <Folder Include="src\libs\ade775x\" />
+    <Folder Include="src\libs\can\" />
+    <Folder Include="src\libs\ds182x\" />
+    <Folder Include="src\libs\eeprom\" />
+    <Folder Include="src\libs\esp8266\" />
+    <Folder Include="src\libs\gps\" />
+    <Folder Include="src\libs\i2c\" />
+    <Folder Include="src\libs\imu\" />
+    <Folder Include="src\libs\interrupts\" />
+    <Folder Include="src\libs\kernel\" />
+    <Folder Include="src\libs\lcds\" />
+    <Folder Include="src\libs\mhz14\" />
+    <Folder Include="src\libs\modbus\" />
+    <Folder Include="src\libs\motors\" />
+    <Folder Include="src\libs\nmea\" />
+    <Folder Include="src\libs\ntc\" />
+    <Folder Include="src\libs\pcf857x\" />
+    <Folder Include="src\libs\pid\" />
+    <Folder Include="src\libs\sht1x\" />
+    <Folder Include="src\libs\sht2x\" />
+    <Folder Include="src\libs\spi\" />
+    <Folder Include="src\libs\timer\" />
+    <Folder Include="src\libs\tsl256x\" />
+    <Folder Include="src\libs\usart\" />
+    <Folder Include="src\libs\utils\" />
+    <Folder Include="src\libs\xbee\" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
