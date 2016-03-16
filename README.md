@@ -13,9 +13,9 @@ User can program the range of the current (min -max) to be controled regarding t
 
 ## Videos/Images
 
-![](./Images/SchThumbnail.jpg)
+![](./Images/SchThumbnail.png)
 Proteus schematics.  
-![](./Images/DiagramThumbnail.jpg)
+![](./Images/DiagramThumbnail.png)
 Reference voltage vs. load current.
 
 
